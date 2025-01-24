@@ -1,7 +1,7 @@
-export default function TabButton({ children, onSelect, isActiveTab }) {
+export default function TabButton({ children, isActiveTab, ...rest }) {
     return (
       <li>
-        <button className={isActiveTab ? 'active' : ''} onClick={onSelect}>{children}</button>
+        <button className={isActiveTab ? 'active' : ''} {...rest}>{children}</button> {/* Forward Props */}
       </li>
     );
 }
